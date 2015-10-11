@@ -1,0 +1,43 @@
+body {background-color: #162E47;
+}
+
+
+.col-lg-4{
+	width:50%;
+	margin:0 auto;
+	position:absolute;
+}
+.container{
+	width:50%;
+	margin: 0 auto;
+}
+
+#login-top{
+	background-color:#000;
+	padding-bottom: 40px;
+	}
+
+h2 {
+	text-align:center;
+}
+
+
+.form-signin{
+	background-color:#A1D6F0;
+}
+
+#login-bot{
+	padding-left: 15%;
+	padding-right: 15%;
+}
+
+#userID{
+margin-top:50px;
+}
+
+#submit-button{
+	margin-top: 20px;
+	margin-bottom:50px;
+	background-color: #22B573;
+	
+}

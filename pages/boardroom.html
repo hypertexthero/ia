@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Boardroom - I Agree</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/static/css/simple-sidebar.css" rel="stylesheet">
+    <link href="/static/css/boardroom.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <style type="text/css" media="screen">
+    body {background:#ccc;}
+    .panel-heading {background:#333 !important;}
+    .panel-title {color:#fff;}
+/*    .nav {background:#333;}*/
+    .nav a {color:#fff !important;}
+    .sidebar-heading {color:#fff;}
+    .sidebar-nav ul {list-style:none;}
+    .sidebar-nav ul li ul li {line-height:20px;}
+    
+    .status-red {font-size:40px !important; line-height:0 !important; color:red;}
+    .status-green {font-size:40px !important; line-height:0 !important; color:green;}
+    
+  </style>
+</head>
+
+<body>
+
+    <div id="wrapper">
+      
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+          
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="dashboard.html">
+                        <img src="/static/img/logo.png" alt="I Agree"/>
+                    </a>
+                </li>
+                <li style="background:#666;">
+                    <a style="color:#fff;" href="#">Notifications <strong class="pull-right ">2</strong></a>
+                </li>
+                <li style="background:#666;">
+                    <a style="color:#fff;" href="#">Contracts <strong class="pull-right">3</strong></a>
+                </li>
+                
+                <li>
+                    <ul>
+                      <li>
+                        <a href="#">Sort by: <b>Last Modified</b> <span class="glyphicon glyphicon-chevron-down"></span></a>
+                      </li>
+                      <li class="sidebar-heading text-success">In Progress
+                        <ul>
+                          <li>
+                            <a href="">American Bank 1<br>
+                            <small class="text-muted">Last mod: 2020-01-01</small>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="">American Bank 1<br>
+                            <small class="text-muted">Last mod: 2020-01-01</small>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="">American Bank 1<br>
+                            <small class="text-muted">Last mod: 2020-01-01</small>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="sidebar-heading">Not Started</li>
+                      <li class="sidebar-heading">Draft</li>
+                      <li class="sidebar-heading">Finalized</li>
+                    </ul>
+                </li>
+                
+                <li style="background:#666;">
+                    <a style="color:#fff;" href="#">Archived Contracts</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+              <a style="position:absolute; top:0; left:-30px; z-index:3000;" href="#menu-toggle" class="btn btn-default" id="menu-toggle">&larr; &rarr;</a>
+                <div class="pull-right">
+                  <ul class="nav nav-pills">
+                    <li>
+                      <a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> John Doe <br>
+                      <small>Associate</small>
+                      </a>
+                    </li>
+                    <li><a href="#"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> New Contract</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                  </ul>
+                </div>
+                
+                
+                
+                
+                <div class="row">
+                    <div class="col-lg-4">
+                      <!-- <p>
+                        <span class="toggleable glyphicon glyphicon-th-list" data-toggle="collapse" data-target="#toc" aria-expanded="true" aria-controls="toc"></span>
+                        <span class="toggleable glyphicon glyphicon-comment" data-toggle="collapse" data-target="#comments" aria-expanded="false" aria-controls="comments"></span>
+                        <span class="toggleable glyphicon glyphicon-history" data-toggle="collapse" data-target="#history" aria-expanded="false" aria-controls="history"></span>
+                        <span class="toggleable glyphicon glyphicon-group" data-toggle="collapse" data-target="#contractingparties" aria-expanded="false" aria-controls="contractingparties"></span>
+                        <button id="collapse-init" class="btn btn-small">
+                            Show all
+                        </button>
+                      </p> -->
+                      
+                      <h3 class="toggleable" data-toggle="collapse" data-target="#toc" aria-expanded="true" aria-controls="toc">Table of Contents <small class="glyphicon glyphicon-th-list"></small></h3>
+                        <div class="collapse in" id="toc">
+                          <ul>
+                            <li><a href="#">1. Thank you:</a></li>
+                            <li><a href="#">2. Borrower:</a></li>
+                            <li><a href="#">3. Amount: </a></li>
+                            <li><a href="#">4. Purpose:</a></li>
+                            <li><a href="#">5. Collateral: </a></li>
+                            <li><a href="#">6. Interest Rate:</a></li>
+                            <li><a href="#">7. Facility Fee: </a></li>
+                            <li><a href="#">8. Maturity: </a></li>
+                            <li><a href="#">9. Payments: </a></li>
+                            <li>1<a href="#">0. Guarantors:</a></li>
+                          </ul>
+                        </div>
+                      
+                        <h3 class="toggleable" data-toggle="collapse" data-target="#comments" aria-expanded="true" aria-controls="comments">Comments <small class="glyphicon glyphicon-comment"></small></h3>
+                        <div class="collapse" id="comments">
+                          <ul>
+                            <li><a href="#">Segment 1, Line 4</a><br>
+                            <small class="text-muted">by Mark Twain, Oct 14 2015</small></li>
+                            <li><a href="#">Segment 2, Line 1</a><br>
+                            <small class="text-muted">by Lewis Carroll, Oct 13 2015</small></li>
+                          </ul>
+                        </div>
+                      
+                        <h3 class="toggleable" data-toggle="collapse" data-target="#history" aria-expanded="true" aria-controls="history">History <small class="glyphicon glyphicon-time"></small></h3>
+                        <div class="collapse" id="history">
+                          <ul>
+                            <li><a href="#">Edited by Mark Twain</a><br>
+                            <span class="text-muted">12:45 PM, Oct 14 2015</span></li>
+                            <li><a href="#">Edited by Lewis Caroll</a><br>
+                            <span class="text-muted">7:03 PM, Oct 13 2015</span></li>
+                          </ul>                        
+                        </div>
+                      
+                        <h3 class="toggleable" data-toggle="collapse" data-target="#contractingparties" aria-expanded="true" aria-controls="contractingparties">Contracting Parties <small class="glyphicon glyphicon-user"></small><small class="glyphicon glyphicon-user"></small><small class="glyphicon glyphicon-user"></small></h3>
+                        <div class="collapse" id="contractingparties">
+                          <ul>
+                            <li>Mark Twain, Associate River Corp MTwain@Rivercorp.com
+                            ###-###-####</li>
+                          </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8 whitebg">
+                      
+                      <h1>Contract Name</h1>
+                    <div id="cheatdiv">
+                      <ul>
+                        <li>Time started: 2015-10-11</li>
+                        <li>Last modified: 2 hours ago</li>
+                        <li>Time elapsed: 7 Hours</li>
+                        <li>In Progress</li>
+                        <li>Company Name: Anytown Bank</li>
+                        <li>Contract Type: Term Sheet</li>
+                      </ul>
+                    </div>  
+
+                      <h2 class="toggleable" data-toggle="collapse" data-target="#s1" aria-expanded="false" aria-controls="s1">1. Thank you: 
+                        
+                        <!-- target -->
+                        <small id="target1" class="status-red">•</small>
+                        <small><span class="glyphicon glyphicon-plus"></span></small> 
+                      </h2>
+                      <div class="collapse" id="s1">
+        
+        
+                        <div class="panel pull-right" style="background:#eee; padding:0.5em; margin:0.5em;">Edits: <a href="#edit1">Segment 1, Line 4</a>
+                          <br>
+                          <small class="text-muted">by Mark Twain, Oct 14 2015</small>
+                          <br>
+                          <strong>
+                            
+                          
+                          <!-- toggle -->
+                            <a href="#" id="accept1"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Accept Changes</a>
+                          
+                          
+                          </strong>
+                          <br> <small>or click paragraph to edit.</small>
+                        </div>
+                      
+
+                          <p contenteditable="true">Thank you for giving Anytown Community Bank (the &lsquo;Bank&rsquo;) the opportunity to review your credit request. This term sheet is a basic outline of the terms and conditions currently being contemplated. This is not a commitment to lend, but merely an expression of our interest in providing the aforementioned financing request. <del class="text-danger" id="edit1">The terms and conditions are subject to change in whole or in part once our due diligence, credit analysis and underwriting is complete.</del> <span class="text-success">The terms and conditions are subject to change in part once our due diligence, credit analysis and underwriting is complete.</span></p>
+                            
+                            
+                            <a href="#s1">#</a></p>
+                      </div>
+
+                      <h2 class="toggleable" data-toggle="collapse" data-target="#s2" aria-expanded="false" aria-controls="s2">2. Borrower 
+                        <small style="font-size:40px; line-height:0; color:green;">•</small>
+                        <small><span class="glyphicon glyphicon-plus"></span></small> 
+                      </h2>
+                      <div class="collapse" id="s2">
+                        <div class="panel pull-right" style="background:#eee; padding:0.5em; margin:0.5em;">
+                          <small>Click paragraph to edit, then <a href="#"><b>Save</b></a>.</small>
+                        </div>
+                        
+                          <p contenteditable="true">ABC Corp. <a href="#s2">#</a></p contenteditable="true">
+                      </div>
+                      
+                      <h2 class="toggleable" data-toggle="collapse" data-target="#s3" aria-expanded="false" aria-controls="s3">3. Amount: 
+                        <small style="font-size:40px; line-height:0; color:green;">•</small>
+                        <small><span class="glyphicon glyphicon-plus"></span></small>
+                      
+                      </h2>
+                      <div class="collapse" id="s3">
+                        <div class="panel pull-right" style="background:#eee; padding:0.5em; margin:0.5em;">
+                          <small>Click paragraph to edit, then <a href="#"><b>Save</b></a>.</small>
+                        </div>
+                          <p contenteditable="true">$2,500,000 Revolving Line of Credit under the Ex-Im Bank Working Capital Guaranteed Program. <a href="#s3">#</a></p contenteditable="true">
+                      </div>
+                      
+                      <h2 class="toggleable" data-toggle="collapse" data-target="#s4" aria-expanded="false" aria-controls="s4">4. Purpose: 
+                        <small id="target2" class="status-red">•</small>
+                        <small><span class="glyphicon glyphicon-plus"></span></small>
+                      
+                      </h2>
+                      <div class="collapse" id="s4">
+                        
+                        <div class="panel pull-right" style="background:#eee; padding:0.5em; margin:0.5em;">Edits: <a href="#edit1">Segment 1, Line 1</a>
+                          <br>
+                          <small class="text-muted">by Mark Twain, Oct 11 2015</small>
+                          <br>
+                          <strong><a id="accept2" href="#"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Accept Changes</a></strong>
+                          <br> <small>or click paragraph to edit.</small>
+                        </div>
+                                                
+                          <p contenteditable="true">Advances on Eximbank eligible foreign accounts receivable, <del class="text-danger" id="edit2">exportable</del> inventory and export orders to (a) on first disbursement refinance existing debt and (b) to acquire exportable inventory and pay for direct and indirect costs related to the purchase of exportable goods. <a href="#s4">#</a></p contenteditable="true">
+                      </div>
+                      
+                      <h2 class="toggleable" data-toggle="collapse" data-target="#s5" aria-expanded="false" aria-controls="s5">5. Collateral:
+                        <small id="target3" class="status-red">•</small>
+                        <small><span class="glyphicon glyphicon-plus"></span></small>
+                      
+                      </h2>
+                      <div class="collapse" id="s5">
+                        
+                        
+                        
+                        <div class="panel pull-right" style="background:#eee; padding:0.5em; margin:0.5em;">Edits: <a href="#edit1">Segment 1, Line 1</a>
+                          <br>
+                          <small class="text-muted">by Mark Twain, Oct 10 2015</small>
+                          <br>
+                          <strong><a id="accept3" href="#"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Accept Changes</a></strong>
+                          
+                          
+                          <br> <small>or click paragraph to edit.</small>
+                        </div>
+                        
+                        
+                        <p contenteditable="true"><del class="text-danger" id="edit3">Blanket</del> <span class="text-success">L</span>ien on the corporate assets of borrower (including first lien on accounts receivable and inventory). The advances shall be limited to the following borrowing base formula: ‘Export-Related Borrowing Base’ means, at the date of determination thereof, the sum of (a) 90% of the Eligible Export-Related Accounts Receivable Value and (b) 75% of the Eligible Export-Related Inventory Value; provided, however, that the portion of the outstanding principal balance that is supported by Export-Related Inventory Value shall never exceed 60% of the total amount outstanding under the Revolving Line of Credit.
+‘Eligible Export-Related Accounts Receivable’ means all Export-Related Accounts permitted to be included in the Export-Related Borrowing Base pursuant to the Borrower Agreement; provided that ‘Eligible Export-Related Accounts Receivable’ shall not include any Account Receivable that (i) is not covered by the Ex-Im Bank Guarantee (e.g. sales terms not in compliance with the Country Limitation Schedule then in effect, due and payable more than 180 days from the date of invoice), (ii) is due from a company affiliated with the Borrower or any guarantor (except for Permitted Affiliate Accounts Receivable), or (iii) the Bank may from time to time deem to be ineligible. Export-Related Inventory’ shall mean Inventory of the Borrower that has a minimum of 50% United States Content, that is located in the United States, that has been purchased, manufactured or otherwise acquired by the Borrower for resale pursuant to a written export order or contract for the purchase by a buyer of finished goods or services and that is intended for export from the United States. ‘Eligible Export-Related Inventory’ means all Export-Related Inventory that is permitted to be included in the Export-Related Borrowing Base pursuant to the Borrower Agreement; provided, that ‘Eligible Export-Related Inventory’ shall not include any Inventory that: (i) is not covered by the Ex-Im Bank Guarantee; (ii) is located at a facility not owned by the Borrower unless a landlord or warehouseman waiver (in form and content acceptable to the Bank) is obtained with respect to each such facility and the Bank gives its prior written consent; (iii) is owned by a company affiliated with the Borrower or any guarantor or by any guarantor; or (iv) the Bank may from time to time deem to be ineligible. <a href="#s5">#</a></p contenteditable="true">
+                      </div>
+                      
+                      <h2 class="toggleable" data-toggle="collapse" data-target="#s6" aria-expanded="false" aria-controls="s6">6. Interest Rate:
+                        <small style="font-size:40px; line-height:0; color:green;">•</small>
+                        <small><span class="glyphicon glyphicon-plus"></span></small>
+                      
+                      </h2>
+                      <div class="collapse" id="s6">
+                        <div class="panel pull-right" style="background:#eee; padding:0.5em; margin:0.5em;">
+                          <small>Click paragraph to edit, then <a href="#"><b>Save</b></a>.</small>
+                        </div>
+                          <p contenteditable="true">Floating at one month Libor + 3.75% with a 5% floor <a href="#s6">#</a></p contenteditable="true">
+                      </div>
+
+                      <h2 class="toggleable" data-toggle="collapse" data-target="#s7" aria-expanded="false" aria-controls="s7">7. Facility Fee:
+                        <small style="font-size:40px; line-height:0; color:green;">•</small>
+                        <small><span class="glyphicon glyphicon-plus"></span></small>
+                      
+                      </h2>
+                      <div class="collapse" id="s7">
+                        <div class="panel pull-right" style="background:#eee; padding:0.5em; margin:0.5em;">
+                          <small>Click paragraph to edit, then <a href="#"><b>Save</b></a>.</small>
+                        </div>
+                          <p contenteditable="true">$100 Ex-Im Bank application fee; and 1.5% guarantee fee on the facility amount due and collectable at closing.Borrower shall pay all costs, expenses and fees (including, without limitation, recording and attorney fees and cost and audit fees) associated with this transaction. <a href="#s7">#</a></p contenteditable="true">
+                      </div>
+                      
+                      
+                      <h2 class="toggleable" data-toggle="collapse" data-target="#s8" aria-expanded="false" aria-controls="s8">8. Maturity:
+                        <small style="font-size:40px; line-height:0; color:green;">•</small>
+                        <small><span class="glyphicon glyphicon-plus"></span></small>
+                      </h2>
+                      <div class="collapse" id="s8">
+                        <div class="panel pull-right" style="background:#eee; padding:0.5em; margin:0.5em;">
+                          <small>Click paragraph to edit, then <a href="#"><b>Save</b></a>.</small>
+                        </div>
+                        <p contenteditable="true">One year from closing</p contenteditable="true">
+                      </div>
+
+                      <h2 class="toggleable" data-toggle="collapse" data-target="#s9" aria-expanded="false" aria-controls="s9">9. Payments:
+                        <small style="font-size:40px; line-height:0; color:green;">•</small>
+                        <small><span class="glyphicon glyphicon-plus"></span></small>
+                      </h2>
+                      <div class="collapse" id="s9">
+                        <div class="panel pull-right" style="background:#eee; padding:0.5em; margin:0.5em;">
+                          <small>Click paragraph to edit, then <a href="#"><b>Save</b></a>.</small>
+                        </div>
+                        <p contenteditable="true">Principal payments due at the earlier of (i) receipt of payment of any financed receivable, (ii) 180 from disbursement date or (iii) facility expiration date. Interest due monthly.</p contenteditable="true">
+                      </div>
+                      
+                      
+                      <h2 class="toggleable" data-toggle="collapse" data-target="#s10" aria-expanded="false" aria-controls="s10">10. Guarantors:
+                        <small style="font-size:40px; line-height:0; color:green;">•</small>
+                        <small><span class="glyphicon glyphicon-plus"></span></small>
+                      </h2>
+                      <div class="collapse" id="s10">
+                        <div class="panel pull-right" style="background:#eee; padding:0.5em; margin:0.5em;">
+                          <small>Click paragraph to edit, then <a href="#"><b>Save</b></a>.</small>
+                        </div>
+                        <p contenteditable="true">John Smith</p contenteditable="true">
+                      </div>
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox">Accept all segments
+                          </label>
+                        </div>
+                        <button type="submit" class="btn btn-large btn-success" id="acceptall">Save Changes</button>
+                      
+                    </div> <!-- /.col-lg-8 -->
+                    
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="/static/js/jquery.js"></script>
+
+    
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/static/js/bootstrap.min.js"></script>
+
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    
+    // sorry, but no time
+    $("#accept1").click(function() {
+      $("#target1").removeClass('status-red').addClass('status-green');
+    });
+    $("#accept2").click(function() {
+      $("#target2").removeClass('status-red').addClass('status-green');
+    });
+    $("#accept3").click(function() {
+      $("#target3").removeClass('status-red').addClass('status-green');
+    });
+    $("#acceptall").click(function() {
+      $("#target3").removeClass('status-red').addClass('status-green');
+      $("#target2").removeClass('status-red').addClass('status-green');
+      $("#target1").removeClass('status-red').addClass('status-green');
+    });
+    
+    
+    
+    </script>
+
+</body>
+
+</html>

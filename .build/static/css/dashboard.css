@@ -1,0 +1,31 @@
+html{
+	background-color: #206DBD;
+}
+
+#wrapper{
+	background-color: #206DBD;
+}
+
+.panel-heading{
+	background-color: #ADD7FF !important;
+
+    color:#221173 !important;
+}
+
+.alert-warning{
+	color:#22B573;
+	background-color: #E3F7EE;
+}
+
+.class{
+	width: 100%;
+	height:100px;
+	background:black;
+	margin:0px auto;
+}
+
+/*    .nav {background:#333;}*/
+    .nav a {color:#fff !important;}
+    .nav{
+    	margin-bottom:25px;
+    }
